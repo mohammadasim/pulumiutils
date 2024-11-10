@@ -1,6 +1,6 @@
 module github.com/mohammadasim/pulumiutils
 
-go 1.23
+go 1.22
 
 require (
 	dario.cat/mergo v1.0.0 // indirect
