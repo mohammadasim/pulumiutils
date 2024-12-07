@@ -8,11 +8,9 @@ import (
 )
 
 type ApiGatewayResourceArgs struct {
-	ParentId   string
-	PathPart   string
-	restApiId  string
-	httpMethod string
-	authorizer string
+	ParentId  string
+	PathPart  string
+	restApiId string
 }
 
 type ApiGatewayResourceComponent struct {
