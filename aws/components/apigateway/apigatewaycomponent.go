@@ -21,7 +21,7 @@ type ApiGatewayComponent struct {
 
 func NewApiGatewayComponent(ctx *pulumi.Context, name string, args *ApigatewayComponentArgs, opts ...pulumi.ResourceOption) (*ApiGatewayComponent, error) {
 	apigatewaycomponent := &ApiGatewayComponent{}
-	err := ctx.RegisterComponentResource("apigatewaycomponent:index:ApiGatewayComponent", name, apigatewaycomponent, opts...)
+	err := ctx.RegisterComponentResource("mohammadasim:pulumiutils:ApiGatewayComponent", name, apigatewaycomponent, opts...)
 	if err != nil {
 		return nil, err
 	}
