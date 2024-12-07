@@ -1,5 +1,5 @@
 # Pulumiutils
-[![CI](https://github.com/mohammadasim/pulumiutils/actions/workflows/build.yml/badge.svg)](https://github.com/mohammadasim/pulumiutils/actions/workflows/build.yml)
+[![Build](https://github.com/mohammadasim/pulumiutils/actions/workflows/build.yml/badge.svg)](https://github.com/mohammadasim/pulumiutils/actions/workflows/build.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/mohammadasim/pulumiutils)](https://goreportcard.com/report/github.com/mohammadasim/pulumiutils)
 [![GoDoc](https://godoc.org/github.com/mohammadasim/pulumiutils?status.svg)](https://godoc.org/github.com/mohammadasim/pulumiutils)
 
