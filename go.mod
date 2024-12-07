@@ -1,6 +1,6 @@
 module github.com/mohammadasim/pulumiutils
 
-go 1.22
+go 1.23
 
 require (
 	github.com/pulumi/pulumi-archive/sdk v0.2.2
