@@ -1,5 +1,5 @@
-package apigatewayresourcewithmethod
+// package apigatewayresourcewithmethod
 
-type ApiGatewayResourceWithMethodArgs struct {
-	ApiGatewayResource *ApiGatewayResourceComponent
-}
+// type ApiGatewayResourceWithMethodArgs struct {
+// 	ApiGatewayResource *ApiGatewayResourceComponent
+// }
