@@ -10,12 +10,12 @@ import (
 type ApiGatewayResourceArgs struct {
 	ParentId  string
 	PathPart  string
-	restApiId string
+	RestApiId string
 }
 
 type ApiGatewayResourceComponent struct {
 	pulumi.ResourceState
-	resourceID pulumi.StringOutput `pulumi:"ResourceID"`
+	ResourceID pulumi.StringOutput `pulumi:"ResourceID"`
 }
 
 func NewApiGatewayResourceComponent(ctx *pulumi.Context, name string, args *ApiGatewayResourceArgs, opts ...pulumi.ResourceOption) (*ApiGatewayResourceComponent, error) {
@@ -28,12 +28,12 @@ func NewApiGatewayResourceComponent(ctx *pulumi.Context, name string, args *ApiG
 	resource, err := apigateway.NewResource(ctx, fmt.Sprintf("%s-resource", name), &apigateway.ResourceArgs{
 		ParentId: pulumi.String(args.ParentId),
 		PathPart: pulumi.String(args.PathPart),
-		RestApi:  pulumi.String(args.restApiId),
+		RestApi:  pulumi.String(args.RestApiId),
 	})
 	if err != nil {
 		return nil, err
 	}
 
-	apigatewayResourceComponent.resourceID = resource.ID().ToStringOutput()
+	apigatewayResourceComponent.ResourceID = resource.ID().ToStringOutput()
 	return apigatewayResourceComponent, nil
 }
