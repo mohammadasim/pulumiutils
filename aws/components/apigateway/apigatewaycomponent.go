@@ -8,15 +8,15 @@ import (
 )
 
 type ApigatewayComponentArgs struct {
-	apiName        pulumi.StringInput
-	apiDescription pulumi.StringInput
+	ApiName        pulumi.StringInput
+	ApiDescription pulumi.StringInput
 }
 
 type ApiGatewayComponent struct {
 	pulumi.ResourceState
-	apiGatewayArn            pulumi.StringOutput `pulumi:"apiGatewayArn"`
-	apiGatewayID             pulumi.StringOutput `pulumi:"apiGatewayID"`
-	apiGatewayRootResourceID pulumi.StringOutput `pulumi:"apiGatewayRootResourceID"`
+	ApiGatewayArn            pulumi.StringOutput `pulumi:"apiGatewayArn"`
+	ApiGatewayID             pulumi.StringOutput `pulumi:"apiGatewayID"`
+	ApiGatewayRootResourceID pulumi.StringOutput `pulumi:"apiGatewayRootResourceID"`
 }
 
 func NewApiGatewayComponent(ctx *pulumi.Context, name string, args *ApigatewayComponentArgs, opts ...pulumi.ResourceOption) (*ApiGatewayComponent, error) {
@@ -26,17 +26,17 @@ func NewApiGatewayComponent(ctx *pulumi.Context, name string, args *ApigatewayCo
 		return nil, err
 	}
 
-	apigateway, err := apigateway.NewRestApi(ctx, fmt.Sprintf("%s-apigateway", args.apiName), &apigateway.RestApiArgs{
-		Name:        args.apiName,
-		Description: args.apiDescription,
+	apigateway, err := apigateway.NewRestApi(ctx, fmt.Sprintf("%s-apigateway", args.ApiName), &apigateway.RestApiArgs{
+		Name:        args.ApiName,
+		Description: args.ApiDescription,
 	})
 	if err != nil {
 		return nil, err
 	}
 
-	apigatewaycomponent.apiGatewayArn = apigateway.Arn
-	apigatewaycomponent.apiGatewayID = apigateway.ID().ToStringOutput()
-	apigatewaycomponent.apiGatewayRootResourceID = apigateway.RootResourceId
+	apigatewaycomponent.ApiGatewayArn = apigateway.Arn
+	apigatewaycomponent.ApiGatewayID = apigateway.ID().ToStringOutput()
+	apigatewaycomponent.ApiGatewayRootResourceID = apigateway.RootResourceId
 
 	return apigatewaycomponent, nil
 }

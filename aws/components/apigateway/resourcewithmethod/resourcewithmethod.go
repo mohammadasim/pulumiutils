@@ -15,7 +15,7 @@ type ApiGatewayResourceWithMethodArgs struct {
 
 type ApiGatewayResourceWithMethod struct {
 	pulumi.ResourceState
-	resourceID pulumi.StringOutput `pulumi:"ResourceID"`
+	ResourceID pulumi.StringOutput `pulumi:"ResourceID"`
 }
 
 func NewApiGatewayResourceWithMethodComponent(ctx *pulumi.Context, name string, args *ApiGatewayResourceWithMethodArgs, opts ...pulumi.ResourceOption) (*ApiGatewayResourceWithMethod, error) {
@@ -42,7 +42,7 @@ func NewApiGatewayResourceWithMethodComponent(ctx *pulumi.Context, name string, 
 		return nil, err
 	}
 
-	apigatewayResourceWithMethodComponent.resourceID = apigatewayresourcecomponent.ResourceID
+	apigatewayResourceWithMethodComponent.ResourceID = apigatewayresourcecomponent.ResourceID
 
 	return apigatewayResourceWithMethodComponent, nil
 }
